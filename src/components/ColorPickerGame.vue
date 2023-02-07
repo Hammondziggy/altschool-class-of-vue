@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { useColorPicker } from "../composables/ColorPickerComposable"
+import useColorPicker from "../composables/ColorPickerComposable"
 
 export default {
   setup() { 
