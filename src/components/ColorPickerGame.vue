@@ -13,8 +13,8 @@ import ColorManager from "../composables/ColorPickerComposable"
 
 export default {
   setup() {
-    const { colors, message, matchColor } = ColorManager();
-    return { colors, message, matchColor }
+    //const { colors, message, matchColor } = ColorManager();
+    return { colors, message, matchColor } = ColorManager();
   }
 };  
 </script>
