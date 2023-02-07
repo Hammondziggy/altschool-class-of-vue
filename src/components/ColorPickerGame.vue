@@ -13,7 +13,7 @@ import useColorPicker from "../composables/ColorPickerComposable"
 
 export default {
   setup() { 
-    return useColorPicker();
+    return { colors, message, matchColor }
   },
 };  
 </script>
