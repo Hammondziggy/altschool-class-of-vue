@@ -9,12 +9,12 @@
 </template>
 
 <script>
-import colorManager from "../composables/ColorPickerComposable"
+import ColorManager from "../composables/ColorPickerComposable"
 
 export default {
   setup() {
-    const { colors, message, matchColor } = colorManager();
-    return { colors, message, matchColor },
+    return{ colors, message, matchColor } = ColorManager();
+    //return { colors, message, matchColor },
   },
 };  
 </script>
