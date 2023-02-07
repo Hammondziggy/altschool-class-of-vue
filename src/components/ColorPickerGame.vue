@@ -4,7 +4,7 @@
   <div>{{ message }}</div>
 
   <button v-for="color in colors" :key="color" @click="matchColor(color)">
-    {{ color }}
+    {{ colors }}
   </button>
 </template>
 
@@ -12,9 +12,8 @@
 import useColorPicker from "../composables/ColorPickerComposable"
 
 export default {
-  setup() { 
-    const { colors, message, matchColor } = useColorPicker();
-    return { colors, message, matchColor }
+  setup() {
+    return { colors, message, matchColor } = useColorPicker();
   },
 };  
 </script>

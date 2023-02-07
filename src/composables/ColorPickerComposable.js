@@ -1,31 +1,22 @@
 import { ref, reactive } from "@vue/reactivity";
 
-// Define a function to handle the game logic
-const useColorPicker = () => {
-  const colors = ["green", "red", "blue", "purple"];
-  let message = ref("Pick a color...");
-  const matchColor = (value) => {
-    // do a random color based on the array index;
-    const randomNumber = Math.floor(Math.random() * 3) + 1; //between 1 - 4
+export default function ColorManager() {
+   
+    const colors = ["green", "red", "blue", "purple"];
+    let message = ref("Pick a color...");
 
-    if (colors[randomNumber] === value) {
-      message.value = `You win... [answer: ${colors[randomNumber]}]`;
-      return;
-    }
+    const matchColor = (value) => {
+      // do a random color based on the array index;
+      const randomNumber = Math.floor(Math.random() * 3) + 1; //between 1 - 4
 
-    message.value = `You loose [answer: ${colors[randomNumber]}]`;
-  };
+      if (colors[randomNumber] === value) {
+        message.value = `You win... [answer: ${colors[randomNumber]}]`;
+        return;
+      }
 
-  return { colors, message, matchColor };
+      message.value = `You loose [answer: ${colors[randomNumber]}]`;
+    };
+
+    return { colors, message, matchColor };
+  
 };
-
-export default {
-  setup() {
-    // Call the useColorPicker function and return the values to the component
-    return useColorPicker();
-  },
-};
-
-
-
-
