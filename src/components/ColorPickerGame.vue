@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import useColorPicker from "../composables/ColorPickerComposable"
+import colorManager from "../composables/ColorPickerComposable"
 
 export default {
   setup() {
-    return { colors, message, matchColor } = useColorPicker();
+    return { colors, message, matchColor } = colorManager();
   },
 };  
 </script>
