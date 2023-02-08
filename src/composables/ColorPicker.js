@@ -10,11 +10,10 @@ export default function ColorPicker() {
       const randomNumber = Math.floor(Math.random() * 3) + 1; //between 1 - 4
 
       if (colors[randomNumber] === value) {
-        message.value = `You win... [answer: ${colors[randomNumber]}]`;
-        return;
+        return message.value = `You win... [answer: ${colors[randomNumber]}]`;
+      }else { 
+        return message.value = `You loose [answer: ${colors[randomNumber]}]`;
       }
-
-      message.value = `You loose [answer: ${colors[randomNumber]}]`;
     };
 
     return { colors, message, matchColor };
