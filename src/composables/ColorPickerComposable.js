@@ -1,6 +1,6 @@
-import { ref, reactive } from "@vue/reactivity";
+import { ref } from "@vue/reactivity";
 
-export default function ColorManager() {
+export default function ColorPicker() {
    
     const colors = ["green", "red", "blue", "purple"];
     let message = ref("Pick a color...");
