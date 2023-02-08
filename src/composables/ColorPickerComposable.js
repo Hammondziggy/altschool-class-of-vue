@@ -1,4 +1,4 @@
-import { ref } from "@vue/reactivity";
+import { ref, reactive } from "@vue/reactivity";
 
 export default function ColorPicker() {
    
